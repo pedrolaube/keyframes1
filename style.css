@@ -251,6 +251,7 @@ body {
   .section2 p,
   .section3 p {
     width: 90%;
+
   }
 
   .section1 h3,
@@ -259,3 +260,519 @@ body {
     font-size: 2rem;
   }
 }
+```css
+/* =========================================
+   BOTÃO
+========================================= */
+
+.botao-voltar {
+  margin-top: 20px;
+}
+
+.botao-voltar a {
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 18px;
+
+  padding: 12px 20px;
+
+  border: 1px solid white;
+
+  border-radius: 12px;
+
+  transition: 0.4s;
+}
+
+.botao-voltar a:hover {
+  background-color: white;
+
+  color: black;
+}
+
+/* =========================================
+   SECTION INTERMEDIÁRIA
+========================================= */
+
+.section-intermediaria {
+  width: 100%;
+
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 80px 20px;
+
+  background: linear-gradient(
+    to bottom,
+
+    #000000 0%,
+    #102738 25%,
+    #2f6f91 50%,
+    #8be9ff 75%,
+    #000000 100%
+  );
+}
+
+.section-intermediaria h2 {
+  font-size: 3rem;
+
+  margin-bottom: 30px;
+}
+
+.section-intermediaria p {
+  width: 70%;
+
+  font-size: 1.2rem;
+
+  line-height: 1.8;
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(10px);
+
+  color: white;
+}
+
+.section-intermediaria img {
+  width: 100%;
+  max-width: 1200px;
+
+  height: 500px;
+
+  object-fit: cover;
+
+  border-radius: 25px;
+
+  margin-top: 30px;
+
+  opacity: 0.85;
+
+  transition: 0.5s;
+}
+
+.section-intermediaria img:hover {
+  transform: scale(1.02);
+
+  opacity: 1;
+}
+
+/* =========================================
+   SECTION FINAL
+========================================= */
+
+.section-final {
+  width: 100%;
+
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 80px 20px;
+
+  background: linear-gradient(
+    to bottom,
+
+    #000000 0%,
+    #08141f 25%,
+    #12354d 50%,
+    #5bc7e0 75%,
+    #000000 100%
+  );
+}
+
+.section-final h2 {
+  font-size: 3rem;
+
+  margin-bottom: 30px;
+}
+
+.section-final p {
+  width: 70%;
+
+  font-size: 1.2rem;
+
+  line-height: 1.8;
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(10px);
+
+  color: white;
+}
+
+.section-final img {
+  width: 100%;
+  max-width: 1200px;
+
+  height: 500px;
+
+  object-fit: cover;
+
+  border-radius: 25px;
+
+  margin-top: 30px;
+}
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (max-width: 900px) {
+
+  .section-intermediaria p,
+  .section-final p {
+    width: 90%;
+  }
+
+  .section-intermediaria img,
+  .section-final img {
+    height: 300px;
+  }
+
+  .section-intermediaria h2,
+  .section-final h2 {
+    font-size: 2rem;
+  }
+}
+```css
+/* =========================================
+   BOTÃO
+========================================= */
+
+.botao-voltar {
+  margin-top: 20px;
+}
+
+.botao-voltar a {
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 18px;
+
+  padding: 12px 20px;
+
+  border: 1px solid white;
+
+  border-radius: 12px;
+
+  transition: 0.4s;
+}
+
+.botao-voltar a:hover {
+  background-color: white;
+
+  color: black;
+}
+
+/* =========================================
+   SECTION INTERMEDIÁRIA
+========================================= */
+
+.section-intermediaria {
+  width: 100%;
+
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 80px 20px;
+
+  background: linear-gradient(
+    to bottom,
+
+    #000000 0%,
+    #102738 25%,
+    #2f6f91 50%,
+    #8be9ff 75%,
+    #000000 100%
+  );
+}
+
+.section-intermediaria h2 {
+  font-size: 3rem;
+
+  margin-bottom: 30px;
+}
+
+.section-intermediaria p {
+  width: 70%;
+
+  font-size: 1.2rem;
+
+  line-height: 1.8;
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(10px);
+
+  color: white;
+}
+
+.section-intermediaria img {
+  width: 100%;
+  max-width: 1200px;
+
+  height: 500px;
+
+  object-fit: cover;
+
+  border-radius: 25px;
+
+  margin-top: 30px;
+
+  opacity: 0.85;
+
+  transition: 0.5s;
+}
+
+.section-intermediaria img:hover {
+  transform: scale(1.02);
+
+  opacity: 1;
+}
+
+/* =========================================
+   SECTION FINAL
+========================================= */
+
+.section-final {
+  width: 100%;
+
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 80px 20px;
+
+  background: linear-gradient(
+    to bottom,
+
+    #000000 0%,
+    #08141f 25%,
+    #12354d 50%,
+    #5bc7e0 75%,
+    #000000 100%
+  );
+}
+
+.section-final h2 {
+  font-size: 3rem;
+
+  margin-bottom: 30px;
+}
+
+.section-final p {
+  width: 70%;
+
+  font-size: 1.2rem;
+
+  line-height: 1.8;
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(10px);
+
+  color: white;
+}
+
+.section-final img {
+  width: 100%;
+  max-width: 1200px;
+
+  height: 500px;
+
+  object-fit: cover;
+
+  border-radius: 25px;
+
+  margin-top: 30px;
+}
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (max-width: 900px) {
+
+  .section-intermediaria p,
+  .section-final p {
+    width: 90%;
+  }
+
+  .section-intermediaria img,
+  .section-final img {
+    height: 300px;
+  }
+
+  .section-intermediaria h2,
+  .section-final h2 {
+    font-size: 2rem;
+  }
+}
+```css id="fish-animation-css"
+/* =========================================
+   CONTAINER DAS ANIMAÇÕES
+========================================= */
+
+.animacao-marinha {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  pointer-events: none;
+
+  overflow: hidden;
+
+  z-index: 1;
+}
+
+/* =========================================
+   TODOS OS PEIXES
+========================================= */
+
+.peixe,
+.orca {
+  position: absolute;
+
+  mix-blend-mode: difference;
+
+  opacity: 0.9;
+}
+
+/* =========================================
+   PEIXES PEQUENOS
+========================================= */
+
+.peixe {
+  width: 120px;
+
+  animation: peixeHorizontal 12s ease-out infinite;
+}
+
+/* POSIÇÕES DIFERENTES */
+
+.peixe1 {
+  top: 20%;
+  animation-delay: 0s;
+}
+
+.peixe2 {
+  top: 45%;
+  animation-delay: 4s;
+}
+
+.peixe3 {
+  top: 70%;
+  animation-delay: 8s;
+}
+
+/* =========================================
+   ORCA
+========================================= */
+
+.orca {
+  width: 320px;
+
+  top: 55%;
+
+  animation: orcaHorizontal 20s ease-in infinite;
+
+  opacity: 0.95;
+}
+
+/* =========================================
+   KEYFRAMES DOS PEIXES
+========================================= */
+
+@keyframes peixeHorizontal {
+
+  0% {
+    transform: translateX(-300px);
+  }
+
+  100% {
+    transform: translateX(120vw);
+  }
+}
+
+/* =========================================
+   KEYFRAMES DA ORCA
+========================================= */
+
+@keyframes orcaHorizontal {
+
+  0% {
+    transform: translateX(-500px);
+  }
+
+  100% {
+    transform: translateX(140vw);
+  }
+}
+
+/* =========================================
+   TEXTO ACIMA DOS PEIXES
+========================================= */
+
+h1,
+h2,
+h3,
+p,
+a {
+  position: relative;
+
+  z-index: 2;
+
+  mix-blend-mode: difference;
+}
+
+/* =========================================
+   IMAGENS DA PÁGINA
+========================================= */
+
+.section1 img,
+.section2 img,
+.section3 img,
+.section-final img,
+.section-intermediaria img {
+  position: relative;
+
+  z-index: 2;
+}
+```
+
