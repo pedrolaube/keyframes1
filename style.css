@@ -246,12 +246,801 @@ body {
   .section3 img {
     height: 300px;
   }
+  body {
+    background-color: black;
+    color: white;
+
+    font-family:
+      "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+    overflow-x: hidden;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0;
+  }
+
+  /* =========================================
+   CARROSSEL
+========================================= */
+
+  /* área que esconde as imagens */
+  .carrossel-area {
+    width: 900px;
+
+    overflow: hidden;
+
+    margin-top: 40px;
+  }
+
+  /* linha das imagens */
+  .carrossel {
+    display: flex;
+
+    gap: 30px;
+
+    width: max-content;
+
+    animation: slide 15s linear infinite;
+  }
+
+  /* imagens */
+  .carrossel img {
+    width: 350px;
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    transition: 0.4s;
+  }
+
+  /* hover */
+  .carrossel img:hover {
+    transform: scale(1.05);
+  }
+
+  /* links */
+  .carrossel a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 20px;
+  }
+
+  /* =========================================
+   KEYFRAMES
+========================================= */
+
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* =========================================
+   CONFIG PADRÃO DAS SECTIONS
+========================================= */
+
+  .section1,
+  .section2,
+  .section3 {
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 80px 20px;
+  }
+
+  /* =========================================
+   IMAGENS DAS SECTIONS
+========================================= */
+
+  .section1 img,
+  .section2 img,
+  .section3 img {
+    width: 100%;
+    max-width: 1200px;
+
+    height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    opacity: 0.8;
+
+    transition: 0.5s;
+
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  /* hover */
+  .section1 img:hover,
+  .section2 img:hover,
+  .section3 img:hover {
+    transform: scale(1.02);
+
+    opacity: 1;
+  }
+
+  /* =========================================
+   TÍTULOS
+========================================= */
+
+  .section1 h3,
+  .section2 h3,
+  .section3 h3 {
+    font-size: 3rem;
+
+    margin-top: 30px;
+
+    color: white;
+  }
+
+  /* =========================================
+   PARÁGRAFOS
+========================================= */
+
+  .section1 p,
+  .section2 p,
+  .section3 p {
+    width: 70%;
+
+    font-size: 1.2rem;
+
+    line-height: 1.8;
+
+    margin-top: 20px;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    backdrop-filter: blur(10px);
+
+    color: #f1f1f1;
+  }
+
+  /* =========================================
+   SECTION 1 - TROPICAL
+========================================= */
+
+  .section1 {
+    background: linear-gradient(
+      to bottom,
+
+      #000000 0%,
+      #071b0d 20%,
+      #0f3d1f 40%,
+      #1d5c32 70%,
+      #75e784 85%,
+      #000000 100%
+    );
+  }
+
+  /* =========================================
+   SECTION 2 - GELADO
+========================================= */
+
+  .section2 {
+    background: linear-gradient(
+      to bottom,
+
+      #000000 0%,
+      #0f1b2b 20%,
+      #1c4d6e 40%,
+      #5afdda 70%,
+      #bdfcff 85%,
+      #000000 100%
+    );
+  }
+
+  /* =========================================
+   SECTION 3 - DESERTO
+========================================= */
+
+  .section3 {
+    background: linear-gradient(
+      to bottom,
+
+      #000000 0%,
+      #4b2d0f 20%,
+      #8d5b21 40%,
+      #d69b43 70%,
+      #ffd27a 85%,
+      #000000 100%
+    );
+  }
+
+  /* =========================================
+   RESPONSIVO
+========================================= */
+
+  @media (max-width: 900px) {
+    .carrossel-area {
+      width: 95%;
+    }
+
+    .carrossel img {
+      width: 280px;
+      height: 180px;
+    }
+
+    .section1 img,
+    .section2 img,
+    .section3 img {
+      height: 300px;
+    }
+
+    .section1 p,
+    .section2 p,
+    .section3 p {
+      width: 90%;
+    }
+
+    .section1 h3,
+    .section2 h3,
+    .section3 h3 {
+      font-size: 2rem;
+    }
+  }
+  /* =========================================
+   BOTÃO
+========================================= */
+
+  .botao-voltar-canvas {
+    margin-top: 20px;
+  }
+
+  .botao-voltar-canvas a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: 1px solid white;
+    border-radius: 12px;
+    transition: 0.4s;
+  }
+
+  .botao-voltar-canvas a:hover {
+    background-color: rgb(85, 59, 199);
+    color: rgb(255, 255, 255);
+  }
+
+  .botao-voltar-gelado {
+    margin-top: 20px;
+  }
+
+  .botao-voltar-gelado a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: 1px solid white;
+    border-radius: 12px;
+    transition: 0.4s;
+  }
+
+  .botao-voltar-gelado a:hover {
+    background-color: rgb(42, 212, 224);
+    color: rgb(255, 255, 255);
+  }
+  .botao-voltar-deserto {
+    margin-top: 20px;
+  }
+
+  .botao-voltar-deserto a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: 1px solid white;
+    border-radius: 12px;
+    transition: 0.4s;
+  }
+
+  .botao-voltar-deserto a:hover {
+    background-color: rgba(255, 137, 2, 0.856);
+    color: rgb(255, 255, 255);
+  }
+  .botao-voltar-tropical {
+    margin-top: 20px;
+  }
+
+  .botao-voltar-tropical a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: 1px solid white;
+    border-radius: 12px;
+    transition: 0.4s;
+  }
+
+  .botao-voltar-tropical a:hover {
+    background-color: rgba(39, 128, 66, 0.856);
+    color: rgb(255, 255, 255);
+  }
+
+  /*SECTION INTERMEDIÁRIA */
+
+  .section-intermediaria {
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 80px 20px;
+
+    background: linear-gradient(
+      to bottom,
+
+      #000000 0%,
+      #102738 25%,
+      #2f6f91 50%,
+      #8be9ff 75%,
+      #000000 100%
+    );
+  }
+
+  .section-intermediaria h2 {
+    font-size: 3rem;
+
+    margin-bottom: 30px;
+  }
+
+  .section-intermediaria p {
+    width: 70%;
+
+    font-size: 1.2rem;
+
+    line-height: 1.8;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(10px);
+
+    color: white;
+  }
+
+  .section-intermediaria img {
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 25px;
+    margin-top: 30px;
+    opacity: 0.85;
+    transition: 0.5s;
+  }
+
+  .section-intermediaria img:hover {
+    transform: scale(1.02);
+
+    opacity: 1;
+  }
+
+  /*SECTION FINAL*/
+
+  .section-final {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    background: linear-gradient(
+      to bottom,
+
+      #000000 0%,
+      #08141f 25%,
+      #12354d 50%,
+      #5bc7e0 75%,
+      #000000 100%
+    );
+  }
+
+  .section-final h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+  }
+
+  .section-final p {
+    width: 70%;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    color: white;
+  }
+
+  .section-final img {
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 25px;
+    margin-top: 30px;
+  }
+
+  /*RESPONSIVO*/
+
+  @media (max-width: 900px) {
+    .section-intermediaria p,
+    .section-final p {
+      width: 90%;
+    }
+
+    .section-intermediaria img,
+    .section-final img {
+      height: 300px;
+    }
+
+    .section-intermediaria h2,
+    .section-final h2 {
+      font-size: 2rem;
+    }
+  }
+  ```css
+/* =========================================
+   BOTÃO
+========================================= */
+
+.botao-voltar {
+    margin-top: 20px;
+  }
+
+  .botao-voltar a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    padding: 12px 20px;
+
+    border: 1px solid white;
+
+    border-radius: 12px;
+
+    transition: 0.4s;
+  }
+
+  .botao-voltar a:hover {
+    background-color: white;
+
+    color: black;
+  }
+
+  /* =========================================
+   SECTION INTERMEDIÁRIA
+========================================= */
+
+  .section-intermediaria {
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 80px 20px;
+
+    background: linear-gradient(
+      to bottom,
+
+      #000000 0%,
+      #102738 25%,
+      #2f6f91 50%,
+      #8be9ff 75%,
+      #000000 100%
+    );
+  }
+
+  .section-intermediaria h2 {
+    font-size: 3rem;
+
+    margin-bottom: 30px;
+  }
+
+  .section-intermediaria p {
+    width: 70%;
+
+    font-size: 1.2rem;
+
+    line-height: 1.8;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(10px);
+
+    color: white;
+  }
+
+  .section-intermediaria img {
+    width: 100%;
+    max-width: 1200px;
+
+    height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    margin-top: 30px;
+
+    opacity: 0.85;
+
+    transition: 0.5s;
+  }
+
+  .section-intermediaria img:hover {
+    transform: scale(1.02);
+
+    opacity: 1;
+  }
+
+  /* =========================================
+   SECTION FINAL
+========================================= */
+
+  .section-final {
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 80px 20px;
+
+    background: linear-gradient(
+      to bottom,
+
+      #000000 0%,
+      #08141f 25%,
+      #12354d 50%,
+      #5bc7e0 75%,
+      #000000 100%
+    );
+  }
+
+  .section-final h2 {
+    font-size: 3rem;
+
+    margin-bottom: 30px;
+  }
+
+  .section-final p {
+    width: 70%;
+
+    font-size: 1.2rem;
+
+    line-height: 1.8;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(10px);
+
+    color: white;
+  }
+
+  .section-final img {
+    width: 100%;
+    max-width: 1200px;
+
+    height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    margin-top: 30px;
+  }
+
+  /* =========================================
+   RESPONSIVO
+========================================= */
+
+  @media (max-width: 900px) {
+    .section-intermediaria p,
+    .section-final p {
+      width: 90%;
+    }
+
+    .section-intermediaria img,
+    .section-final img {
+      height: 300px;
+    }
+
+    .section-intermediaria h2,
+    .section-final h2 {
+      font-size: 2rem;
+    }
+  }
+  ```css id="fish-animation-css"
+/* =========================================
+   CONTAINER DAS ANIMAÇÕES
+========================================= */
+
+.animacao-marinha {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 1;
+  }
+
+  /* =========================================
+   TODOS OS PEIXES
+========================================= */
+
+  .peixe,
+  .orca {
+    position: absolute;
+
+    mix-blend-mode: difference;
+
+    opacity: 0.9;
+  }
+
+  /* =========================================
+   PEIXES PEQUENOS
+========================================= */
+
+  .peixe {
+    width: 120px;
+
+    animation: peixeHorizontal 12s ease-out infinite;
+  }
+
+  /* POSIÇÕES DIFERENTES */
+
+  .peixe1 {
+    top: 20%;
+    animation-delay: 0s;
+  }
+
+  .peixe2 {
+    top: 45%;
+    animation-delay: 4s;
+  }
+
+  .peixe3 {
+    top: 70%;
+    animation-delay: 8s;
+  }
+
+  /* =========================================
+   ORCA
+========================================= */
+
+  .orca {
+    width: 320px;
+
+    top: 55%;
+
+    animation: orcaHorizontal 20s ease-in infinite;
+
+    opacity: 0.95;
+  }
+
+  /* =========================================
+   KEYFRAMES DOS PEIXES
+========================================= */
+
+  @keyframes peixeHorizontal {
+    0% {
+      transform: translateX(-300px);
+    }
+
+    100% {
+      transform: translateX(120vw);
+    }
+  }
+
+  /* =========================================
+   KEYFRAMES DA ORCA
+========================================= */
+
+  @keyframes orcaHorizontal {
+    0% {
+      transform: translateX(-500px);
+    }
+
+    100% {
+      transform: translateX(140vw);
+    }
+  }
+
+  /* =========================================
+   TEXTO ACIMA DOS PEIXES
+========================================= */
+
+  h1,
+  h2,
+  h3,
+  p,
+  a {
+    position: relative;
+
+    z-index: 2;
+
+    mix-blend-mode: difference;
+  }
+
+  /* =========================================
+   IMAGENS DA PÁGINA
+========================================= */
+
+  .section1 img,
+  .section2 img,
+  .section3 img,
+  .section-final img,
+  .section-intermediaria img {
+    position: relative;
+
+    z-index: 2;
+  }
 
   .section1 p,
   .section2 p,
   .section3 p {
     width: 90%;
-
   }
 
   .section1 h3,
@@ -260,389 +1049,8 @@ body {
     font-size: 2rem;
   }
 }
-```css
 /* =========================================
-   BOTÃO
-========================================= */
-
-.botao-voltar {
-  margin-top: 20px;
-}
-
-.botao-voltar a {
-  color: white;
-
-  text-decoration: none;
-
-  font-size: 18px;
-
-  padding: 12px 20px;
-
-  border: 1px solid white;
-
-  border-radius: 12px;
-
-  transition: 0.4s;
-}
-
-.botao-voltar a:hover {
-  background-color: white;
-
-  color: black;
-}
-
-/* =========================================
-   SECTION INTERMEDIÁRIA
-========================================= */
-
-.section-intermediaria {
-  width: 100%;
-
-  min-height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  padding: 80px 20px;
-
-  background: linear-gradient(
-    to bottom,
-
-    #000000 0%,
-    #102738 25%,
-    #2f6f91 50%,
-    #8be9ff 75%,
-    #000000 100%
-  );
-}
-
-.section-intermediaria h2 {
-  font-size: 3rem;
-
-  margin-bottom: 30px;
-}
-
-.section-intermediaria p {
-  width: 70%;
-
-  font-size: 1.2rem;
-
-  line-height: 1.8;
-
-  padding: 25px;
-
-  border-radius: 20px;
-
-  background: rgba(255, 255, 255, 0.08);
-
-  backdrop-filter: blur(10px);
-
-  color: white;
-}
-
-.section-intermediaria img {
-  width: 100%;
-  max-width: 1200px;
-
-  height: 500px;
-
-  object-fit: cover;
-
-  border-radius: 25px;
-
-  margin-top: 30px;
-
-  opacity: 0.85;
-
-  transition: 0.5s;
-}
-
-.section-intermediaria img:hover {
-  transform: scale(1.02);
-
-  opacity: 1;
-}
-
-/* =========================================
-   SECTION FINAL
-========================================= */
-
-.section-final {
-  width: 100%;
-
-  min-height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  padding: 80px 20px;
-
-  background: linear-gradient(
-    to bottom,
-
-    #000000 0%,
-    #08141f 25%,
-    #12354d 50%,
-    #5bc7e0 75%,
-    #000000 100%
-  );
-}
-
-.section-final h2 {
-  font-size: 3rem;
-
-  margin-bottom: 30px;
-}
-
-.section-final p {
-  width: 70%;
-
-  font-size: 1.2rem;
-
-  line-height: 1.8;
-
-  padding: 25px;
-
-  border-radius: 20px;
-
-  background: rgba(255, 255, 255, 0.08);
-
-  backdrop-filter: blur(10px);
-
-  color: white;
-}
-
-.section-final img {
-  width: 100%;
-  max-width: 1200px;
-
-  height: 500px;
-
-  object-fit: cover;
-
-  border-radius: 25px;
-
-  margin-top: 30px;
-}
-
-/* =========================================
-   RESPONSIVO
-========================================= */
-
-@media (max-width: 900px) {
-
-  .section-intermediaria p,
-  .section-final p {
-    width: 90%;
-  }
-
-  .section-intermediaria img,
-  .section-final img {
-    height: 300px;
-  }
-
-  .section-intermediaria h2,
-  .section-final h2 {
-    font-size: 2rem;
-  }
-}
-```css
-/* =========================================
-   BOTÃO
-========================================= */
-
-.botao-voltar {
-  margin-top: 20px;
-}
-
-.botao-voltar a {
-  color: white;
-
-  text-decoration: none;
-
-  font-size: 18px;
-
-  padding: 12px 20px;
-
-  border: 1px solid white;
-
-  border-radius: 12px;
-
-  transition: 0.4s;
-}
-
-.botao-voltar a:hover {
-  background-color: white;
-
-  color: black;
-}
-
-/* =========================================
-   SECTION INTERMEDIÁRIA
-========================================= */
-
-.section-intermediaria {
-  width: 100%;
-
-  min-height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  padding: 80px 20px;
-
-  background: linear-gradient(
-    to bottom,
-
-    #000000 0%,
-    #102738 25%,
-    #2f6f91 50%,
-    #8be9ff 75%,
-    #000000 100%
-  );
-}
-
-.section-intermediaria h2 {
-  font-size: 3rem;
-
-  margin-bottom: 30px;
-}
-
-.section-intermediaria p {
-  width: 70%;
-
-  font-size: 1.2rem;
-
-  line-height: 1.8;
-
-  padding: 25px;
-
-  border-radius: 20px;
-
-  background: rgba(255, 255, 255, 0.08);
-
-  backdrop-filter: blur(10px);
-
-  color: white;
-}
-
-.section-intermediaria img {
-  width: 100%;
-  max-width: 1200px;
-
-  height: 500px;
-
-  object-fit: cover;
-
-  border-radius: 25px;
-
-  margin-top: 30px;
-
-  opacity: 0.85;
-
-  transition: 0.5s;
-}
-
-.section-intermediaria img:hover {
-  transform: scale(1.02);
-
-  opacity: 1;
-}
-
-/* =========================================
-   SECTION FINAL
-========================================= */
-
-.section-final {
-  width: 100%;
-
-  min-height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  padding: 80px 20px;
-
-  background: linear-gradient(
-    to bottom,
-
-    #000000 0%,
-    #08141f 25%,
-    #12354d 50%,
-    #5bc7e0 75%,
-    #000000 100%
-  );
-}
-
-.section-final h2 {
-  font-size: 3rem;
-
-  margin-bottom: 30px;
-}
-
-.section-final p {
-  width: 70%;
-
-  font-size: 1.2rem;
-
-  line-height: 1.8;
-
-  padding: 25px;
-
-  border-radius: 20px;
-
-  background: rgba(255, 255, 255, 0.08);
-
-  backdrop-filter: blur(10px);
-
-  color: white;
-}
-
-.section-final img {
-  width: 100%;
-  max-width: 1200px;
-
-  height: 500px;
-
-  object-fit: cover;
-
-  border-radius: 25px;
-
-  margin-top: 30px;
-}
-
-/* =========================================
-   RESPONSIVO
-========================================= */
-
-@media (max-width: 900px) {
-
-  .section-intermediaria p,
-  .section-final p {
-    width: 90%;
-  }
-
-  .section-intermediaria img,
-  .section-final img {
-    height: 300px;
-  }
-
-  .section-intermediaria h2,
-  .section-final h2 {
-    font-size: 2rem;
-  }
-}
-```css id="fish-animation-css"
-/* =========================================
-   CONTAINER DAS ANIMAÇÕES
+   PEIXES FEITOS EM CSS
 ========================================= */
 
 .animacao-marinha {
@@ -654,75 +1062,150 @@ body {
   width: 100%;
   height: 100vh;
 
-  pointer-events: none;
-
   overflow: hidden;
+
+  pointer-events: none;
 
   z-index: 1;
 }
 
 /* =========================================
-   TODOS OS PEIXES
-========================================= */
-
-.peixe,
-.orca {
-  position: absolute;
-
-  mix-blend-mode: difference;
-
-  opacity: 0.9;
-}
-
-/* =========================================
-   PEIXES PEQUENOS
+   PEIXE
 ========================================= */
 
 .peixe {
-  width: 120px;
+  position: absolute;
+
+  width: 80px;
+  height: 40px;
+
+  background: white;
+
+  border-radius: 50%;
+
+  opacity: 0.8;
 
   animation: peixeHorizontal 12s ease-out infinite;
 }
 
-/* POSIÇÕES DIFERENTES */
+/* cauda */
+
+.peixe::before {
+  content: "";
+
+  position: absolute;
+
+  left: -20px;
+  top: 10px;
+
+  width: 0;
+  height: 0;
+
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 25px solid white;
+}
+
+/* olho */
+
+.peixe::after {
+  content: "";
+
+  position: absolute;
+
+  right: 12px;
+  top: 12px;
+
+  width: 6px;
+  height: 6px;
+
+  background: black;
+
+  border-radius: 50%;
+}
+
+/* posições */
 
 .peixe1 {
   top: 20%;
-  animation-delay: 0s;
 }
 
 .peixe2 {
-  top: 45%;
+  top: 50%;
+
   animation-delay: 4s;
 }
 
 .peixe3 {
-  top: 70%;
+  top: 75%;
+
   animation-delay: 8s;
 }
 
 /* =========================================
-   ORCA
+   ORCA FEITA EM CSS
 ========================================= */
 
 .orca {
-  width: 320px;
+  position: absolute;
 
-  top: 55%;
+  width: 220px;
+  height: 90px;
+
+  background: white;
+
+  border-radius: 100px;
+
+  top: 60%;
+
+  opacity: 0.9;
 
   animation: orcaHorizontal 20s ease-in infinite;
+}
 
-  opacity: 0.95;
+/* nadadeira */
+
+.orca::before {
+  content: "";
+
+  position: absolute;
+
+  top: -35px;
+  left: 90px;
+
+  width: 0;
+  height: 0;
+
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 45px solid white;
+}
+
+/* cauda */
+
+.orca::after {
+  content: "";
+
+  position: absolute;
+
+  left: -35px;
+  top: 20px;
+
+  width: 0;
+  height: 0;
+
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 40px solid white;
 }
 
 /* =========================================
-   KEYFRAMES DOS PEIXES
+   KEYFRAMES
 ========================================= */
 
 @keyframes peixeHorizontal {
-
   0% {
-    transform: translateX(-300px);
+    transform: translateX(-200px);
   }
 
   100% {
@@ -730,12 +1213,300 @@ body {
   }
 }
 
+@keyframes orcaHorizontal {
+  0% {
+    transform: translateX(-500px);
+  }
+
+  100% {
+    transform: translateX(140vw);
+  }
+}
 /* =========================================
-   KEYFRAMES DA ORCA
+   ANIMAÇÃO DESERTO
 ========================================= */
 
-@keyframes orcaHorizontal {
+.animacao-deserto {
+  position: fixed;
 
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.animacao-deserto {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+/* =========================================
+   RATO
+========================================= */
+
+.rato {
+  position: absolute;
+
+  width: 70px;
+  height: 35px;
+
+  background: #c2a679;
+
+  border-radius: 50px;
+
+  opacity: 0.9;
+}
+
+/* cabeça */
+
+.rato::before {
+  content: "";
+
+  position: absolute;
+
+  right: -12px;
+  top: 6px;
+
+  width: 25px;
+  height: 25px;
+
+  background: #c2a679;
+
+  border-radius: 50%;
+}
+
+/* rabo */
+
+.rato::after {
+  content: "";
+
+  position: absolute;
+
+  left: -35px;
+  top: 14px;
+
+  width: 40px;
+  height: 3px;
+
+  background: pink;
+
+  border-radius: 50px;
+}
+
+/* posições */
+
+.rato1 {
+  top: 72%;
+
+  animation: ratoCorrendo 11s linear infinite;
+}
+
+.rato2 {
+  top: 60%;
+
+  animation: ratoFugindo 8s linear infinite;
+}
+
+.rato3 {
+  top: 35%;
+
+  animation: ratoCorrendo 14s linear infinite;
+
+  animation-delay: 3s;
+}
+
+/* =========================================
+   COBRA
+========================================= */
+
+.cobra {
+  position: absolute;
+
+  width: 320px;
+  height: 30px;
+
+  background: #99a854;
+
+  border-radius: 50px;
+
+  opacity: 0.9;
+}
+
+/* cabeça */
+
+.cobra::before {
+  content: "";
+
+  position: absolute;
+
+  right: -20px;
+  top: -5px;
+
+  width: 40px;
+  height: 40px;
+
+  background: #99a854;
+
+  border-radius: 50%;
+}
+
+/* língua */
+
+.cobra::after {
+  content: "";
+
+  position: absolute;
+
+  right: -35px;
+  top: 13px;
+
+  width: 20px;
+  height: 3px;
+
+  background: red;
+}
+
+/* posições */
+
+.cobra1 {
+  top: 80%;
+
+  animation: cobraAndando 18s linear infinite;
+}
+
+.cobra2 {
+  top: 60%;
+
+  animation: cobraPerseguindo 8s linear infinite;
+}
+
+/* =========================================
+   ESCORPIÃO
+========================================= */
+
+.escorpiao {
+  position: absolute;
+
+  width: 90px;
+  height: 40px;
+
+  background: #311474;
+
+  border-radius: 50%;
+
+  opacity: 0.9;
+}
+
+/* cauda */
+
+.escorpiao::before {
+  content: "";
+
+  position: absolute;
+
+  right: -20px;
+  top: -25px;
+
+  width: 35px;
+  height: 35px;
+
+  border-top: 6px solid #311474;
+  border-right: 6px solid #311474;
+
+  border-radius: 50%;
+}
+
+/* ferrão */
+
+.escorpiao::after {
+  content: "";
+
+  position: absolute;
+
+  right: -8px;
+  top: -8px;
+
+  width: 10px;
+  height: 10px;
+
+  background: #311474;
+
+  transform: rotate(45deg);
+}
+
+/* posições */
+
+.esc1 {
+  top: 28%;
+
+  animation: escorpiaoDireita 10s ease-out infinite;
+}
+
+.esc2 {
+  top: 48%;
+
+  animation: escorpiaoDireita 13s ease-out infinite;
+
+  animation-delay: 2s;
+}
+
+/* aparece vindo da direita */
+
+.esc3 {
+  top: 75%;
+
+  animation: escorpiaoEsquerda 9s ease-in infinite;
+}
+
+/* =========================================
+   KEYFRAMES
+========================================= */
+
+@keyframes ratoCorrendo {
+  0% {
+    transform: translateX(-200px);
+  }
+
+  100% {
+    transform: translateX(120vw);
+  }
+}
+
+/* rato perseguido */
+
+@keyframes ratoFugindo {
+  0% {
+    transform: translateX(-100px);
+  }
+
+  100% {
+    transform: translateX(130vw);
+  }
+}
+
+@keyframes cobraAndando {
   0% {
     transform: translateX(-500px);
   }
@@ -745,34 +1516,586 @@ body {
   }
 }
 
+/* cobra perseguindo o rato */
+
+@keyframes cobraPerseguindo {
+  0% {
+    transform: translateX(-450px);
+  }
+
+  100% {
+    transform: translateX(135vw);
+  }
+}
+
+@keyframes escorpiaoDireita {
+  0% {
+    transform: translateX(-150px);
+  }
+
+  100% {
+    transform: translateX(120vw);
+  }
+}
+
+/* escorpião vindo da direita */
+
+@keyframes escorpiaoEsquerda {
+  0% {
+    transform: translateX(120vw);
+  }
+
+  100% {
+    transform: translateX(-300px);
+  }
+}
 /* =========================================
-   TEXTO ACIMA DOS PEIXES
+   CONTAINER
 ========================================= */
+
+.animacao-floresta {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+/* =========================================
+   CAPIVARA
+========================================= */
+
+.capivara {
+  position: absolute;
+
+  width: 220px;
+  height: 110px;
+
+  background: #8b5a2b;
+
+  border-radius: 80px;
+
+  top: 72%;
+
+  animation: capivaraAndando 18s linear infinite;
+}
+
+/* cabeça */
+
+.capivara::before {
+  content: "";
+
+  position: absolute;
+
+  right: -40px;
+  top: 15px;
+
+  width: 90px;
+  height: 70px;
+
+  background: #8b5a2b;
+
+  border-radius: 50px;
+}
+
+/* pernas */
+
+.capivara::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: -20px;
+  left: 30px;
+
+  width: 140px;
+  height: 20px;
+
+  background: #5e3a1b;
+
+  border-radius: 20px;
+}
+
+/* =========================================
+   TAMANDUÁ
+========================================= */
+
+.tamandua {
+  position: absolute;
+
+  width: 260px;
+  height: 80px;
+
+  background: #c2b280;
+
+  border-radius: 60px;
+
+  top: 52%;
+
+  animation: tamanduaAndando 22s ease-in-out infinite;
+}
+
+/* focinho */
+
+.tamandua::before {
+  content: "";
+
+  position: absolute;
+
+  right: -70px;
+  top: 20px;
+
+  width: 90px;
+  height: 25px;
+
+  background: #c2b280;
+
+  border-radius: 30px;
+}
+
+/* cauda */
+
+.tamandua::after {
+  content: "";
+
+  position: absolute;
+
+  left: -60px;
+  top: 5px;
+
+  width: 90px;
+  height: 70px;
+
+  background: #9b8b5a;
+
+  border-radius: 50%;
+}
+
+/* =========================================
+   COBRAS
+========================================= */
+
+.cobra {
+  position: absolute;
+
+  width: 300px;
+  height: 25px;
+
+  background: #4d7a46;
+
+  border-radius: 50px;
+
+  opacity: 0.9;
+}
+
+/* cabeça */
+
+.cobra::before {
+  content: "";
+
+  position: absolute;
+
+  right: -20px;
+  top: -5px;
+
+  width: 35px;
+  height: 35px;
+
+  background: #4d7a46;
+
+  border-radius: 50%;
+}
+
+/* língua */
+
+.cobra::after {
+  content: "";
+
+  position: absolute;
+
+  right: -30px;
+  top: 11px;
+
+  width: 18px;
+  height: 3px;
+
+  background: red;
+}
+
+/* posições */
+
+.cobra1 {
+  top: 82%;
+
+  animation: cobraAndando 15s linear infinite;
+}
+
+.cobra2 {
+  top: 35%;
+
+  animation: cobraAndando 19s linear infinite;
+
+  animation-delay: 5s;
+}
+
+/* =========================================
+   ARANHAS
+========================================= */
+
+.aranha {
+  position: absolute;
+
+  width: 45px;
+  height: 45px;
+
+  background: #111;
+
+  border-radius: 50%;
+
+  animation: aranhaDescendo 7s ease-in-out infinite;
+}
+
+/* pernas */
+
+.aranha::before {
+  content: "";
+
+  position: absolute;
+
+  top: 20px;
+  left: -20px;
+
+  width: 85px;
+  height: 2px;
+
+  background: #111;
+
+  box-shadow:
+    0 -12px #111,
+    0 12px #111;
+}
+
+/* fio */
+
+.aranha::after {
+  content: "";
+
+  position: absolute;
+
+  top: -200px;
+  left: 22px;
+
+  width: 2px;
+  height: 200px;
+
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* posições */
+
+.aranha1 {
+  left: 20%;
+  top: 25%;
+  animation-delay: 0s;
+}
+
+.aranha2 {
+  left: 55%;
+  top: 40%;
+  animation-delay: 2s;
+}
+
+.aranha3 {
+  left: 80%;
+  top: 30%;
+  animation-delay: 4s;
+}
+
+/* =========================================
+   KEYFRAMES
+========================================= */
+
+@keyframes capivaraAndando {
+  0% {
+    transform: translateX(-400px);
+  }
+
+  100% {
+    transform: translateX(130vw);
+  }
+}
+
+@keyframes tamanduaAndando {
+  0% {
+    transform: translateX(120vw);
+  }
+
+  100% {
+    transform: translateX(-500px);
+  }
+}
+
+@keyframes cobraAndando {
+  0% {
+    transform: translateX(-500px);
+  }
+
+  100% {
+    transform: translateX(140vw);
+  }
+}
+
+@keyframes aranhaDescendo {
+  0% {
+    transform: translateY(-250px);
+  }
+
+  50% {
+    transform: translateY(120px);
+  }
+
+  100% {
+    transform: translateY(-250px);
+  }
+}
+.organizaçoes img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 20px;
+  top-margin: 20px;
+  transition: 0.4s;
+  align-items: center;
+  border-radius: 20px;
+}
+.maior img:hover {
+  transform: scale(1.05);
+  width: 270px;
+  height: 170px;
+}
+/*AJUSTES GERAIS */
+
+body {
+  background-color: black;
+  color: white;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+/*TEXOS NA FRENTE DAS ANIMAÇÕES*/
 
 h1,
 h2,
 h3,
 p,
-a {
+a,
+img {
   position: relative;
-
   z-index: 2;
-
-  mix-blend-mode: difference;
 }
 
-/* =========================================
-   IMAGENS DA PÁGINA
-========================================= */
+/*BOTÕES*/
+
+.botao-voltar-canvas,
+.botao-voltar-gelado,
+.botao-voltar-deserto,
+.botao-voltar-tropical {
+  margin-top: 20px;
+  position: relative;
+  z-index: 5;
+}
+
+.botao-voltar-canvas a,
+.botao-voltar-gelado a,
+.botao-voltar-deserto a,
+.botao-voltar-tropical a {
+  color: white;
+
+  text-decoration: none;
+  font-size: 18px;
+  padding: 12px 20px;
+  border: 1px solid white;
+  border-radius: 12px;
+  transition: 0.4s;
+  display: inline-block;
+}
+
+/* hover */
+
+.botao-voltar-canvas a:hover {
+  background-color: rgb(85, 59, 199);
+}
+
+.botao-voltar-gelado a:hover {
+  background-color: rgb(42, 212, 224);
+}
+
+.botao-voltar-deserto a:hover {
+  background-color: rgba(255, 137, 2, 0.856);
+}
+
+.botao-voltar-tropical a:hover {
+  background-color: rgba(39, 128, 66, 0.856);
+}
+
+/*ORGANIZAÇÕES*/
+
+.organizacoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.organizacoes img {
+  width: 230px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+.organizacoes img:hover {
+  transform: scale(1.05);
+}
+
+/* imagem maior */
+
+.maior {
+  width: 260px !important;
+}
+
+/*SECTIONS */
+
+.section1,
+.section2,
+.section3,
+.section-final,
+.section-intermediaria {
+  position: relative;
+
+  z-index: 1;
+}
+
+/*IMAGENS*/
 
 .section1 img,
 .section2 img,
 .section3 img,
 .section-final img,
 .section-intermediaria img {
-  position: relative;
-
-  z-index: 2;
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 25px;
+  opacity: 0.85;
+  transition: 0.5s;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
 }
-```
 
+.section1 img:hover,
+.section2 img:hover,
+.section3 img:hover,
+.section-final img:hover,
+.section-intermediaria img:hover {
+  transform: scale(1.02);
+
+  opacity: 1;
+}
+
+/*PARÁGRAFOS */
+
+.section1 p,
+.section2 p,
+.section3 p,
+.section-final p,
+.section-intermediaria p {
+  width: 70%;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-top: 20px;
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  color: #f1f1f1;
+}
+
+/*ANIMAÇÕES ATRÁS DAS LETRAS */
+
+.animacao-marinha,
+.animacao-deserto,
+.animacao-floresta {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.45;
+}
+
+/*RESPONSIVO */
+
+@media (max-width: 900px) {
+  .carrossel-area {
+    width: 95%;
+  }
+
+  .carrossel img {
+    width: 280px;
+    height: 180px;
+  }
+
+  .section1 img,
+  .section2 img,
+  .section3 img,
+  .section-final img,
+  .section-intermediaria img {
+    height: 300px;
+  }
+
+  .section1 p,
+  .section2 p,
+  .section3 p,
+  .section-final p,
+  .section-intermediaria p {
+    width: 90%;
+  }
+
+  .section1 h3,
+  .section2 h3,
+  .section3 h3,
+  .section-final h2,
+  .section-intermediaria h2 {
+    font-size: 2rem;
+  }
+  .organizacoes img {
+    width: 180px;
+    height: 110px;
+  }
+}
